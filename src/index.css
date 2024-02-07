@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+h4 {
+  @apply text-base;
+}
+h5 {
+  @apply text-sm;
+}
+p {
+  @apply text-xs;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/spacegrotesk.ttf");
+}
+
+.titlebar {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag !important;
+}
+
+.filter-color {
+  filter: invert(99%) sepia(1%) saturate(3118%) hue-rotate(179deg) brightness(99%) contrast(85%);
+}
+
+.gradient {
+  background: linear-gradient(to bottom, #eb8fa9, rgba(#eb8fa9, 0));
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px), scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px), scale(0.5);
+  }
+}
+
+.fade {
+  animation: fade-down 0.5s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin:hover {
+  animation: spin 0.25s;
+}
